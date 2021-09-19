@@ -1,0 +1,35 @@
+starting the server:-
+    * redis-server
+running the client:-
+    * redis-cli
+
+Command:-
+    > exists key                                                     //Test if specified key exists.
+    > del key1 key2 ... keyN                                         //Remove the specified keys.
+    > ttl key                                                        //Returns remaining time to live, in seconds, for a key with EXPIRE set.
+    > set key value                                                  //Sets the value of key to the string value.
+    > get key                                                        //Gets the value of key
+    > rpush key string or
+    > lpush key string                                               //Adds the string to the head (rpush) or tail (lpush) of the list at key. 
+    > llen key                                                       //Returns the length of the list at key.
+    >lrange key start end                                            //Returns the elements of list at key, zero-based. Negative numbers are offset from the end of the list.
+    >lset key index value                                            //Sets the element of list key at index to the specified value.
+    >lrem key count value                                            //Removes count number of items from the list that have the specified value.
+    >lpop key string or
+    >rpop key string                                                 //Atomically removes and returns the first (lpop) or last (rpop) element from list key.
+    >sadd key member                                                 //Adds member to the set stored at key.
+    >srem key member                                                 //Removes member from set key.
+    >spop key or
+    >srandmember key                                                 //Returns random element from set key. spop will remove the element.Return element, or nil object if key is empty or doesn't exist
+    >smembers key                                                    //Returns all of the members of set key.
+    >HSET KEY field value                                            //Set field and value in HASHMAP
+    >HGET key field                                                  //GET Key value from HASHMAP
+    >HDEL key field                                                  //Delete a pair from HASHMAP
+    >HEXISTS KEY FIELD                                               //Check if field exits in HASHMAP
+
+Channel Command:
+    >SUBSCRIBE Channel_Name                                          //Starts getting broadcast from a Channel
+    >UNSUBSCRIBE Channel_Name                                        //Unsubscribe channel
+    >PUBLISH Channel_Name Message                                    //Sends BroadCast Message to all SUBSCRIBERS
+    >PSUBSCRIBE D*                                                   //Subscribes all channel starting from Delete
+    >PUNSUBSCRIBE D*                                                 //Unsubscribe all channels starting from D
