@@ -1,0 +1,33 @@
+1. To setup redis in windows we will be using WSL(Ubuntu 20.0.4)
+2. First open control panel.
+3. Go to Programs and features.
+4. Go to Add or remove Program and Features
+5. Select Windows Subsytem Linux(WSL) option Click on Apply.
+
+After Restart
+
+6. Go to Microsoft Store .
+7. Download UBUNTU 20.0.4 for WSL.
+8. After Installing it open UBUNTU Terminal.
+9. Now Run Following Commands.
+
+Commands:-
+
+$ sudo apt update && apt upgrade
+$ sudo apt install redis-server
+$ sudo nano /etc/redis/redis.conf
+$ sudo service redis-server start
+$ redis-cli  // Now this open the Redis Command line 
+
+After This Check if Redis is working or not by follwowing Commands:
+ 
+    Sytnax:
+        > Set Key Value   //Ex- Set Name Cypher
+        > Get Key         //Ex- Get Name
+
+  If these commands work properly your Redis Steup is complete.
+
+To Exit:-
+
+    Command :
+        >exit

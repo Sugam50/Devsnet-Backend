@@ -1,0 +1,18 @@
+1. We will be using WSL for postgress Also 
+2. So to install Postgress on your Ubuntu Follow below Steps.
+3. Open Ubuntu Terminal.
+
+Command:-
+    $ sudo apt update
+    $ sudo apt install postgresql postgresql-contrib
+    $ sudo -i -u postgres
+
+Now check by Creating a Database and connecting to it.
+
+  postgres@server$ psql                                     //  This will start your postgresSQL 
+  postgress=# Create Database Student;                      //  To check If Postgress i working or not.
+                                ^-->(DataBase_name)
+
+To Exit:
+    postgres=# \q
+
