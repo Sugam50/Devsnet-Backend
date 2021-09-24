@@ -9,6 +9,6 @@ router.get('/', function(req, res, next) {
 });
 
 /*GET Register Page*/
-router.get('/register',registerCheck,register);
+router.post('/register',registerCheck,register);
 
 module.exports = router;

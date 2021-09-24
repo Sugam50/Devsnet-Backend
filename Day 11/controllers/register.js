@@ -8,10 +8,10 @@ const register =async (req,res)=>{
         if(alreadyExists){
             res.status(401).send("Email ALready Exists");
         }
-        const salt = bcrypt.genSaltSync(saltRounds);
-        const hash = bcrypt.hashSync(password, salt);
+        const salt = bycrypt.genSaltSync(saltRounds);
+        const hash = bycrypt.hashSync(password, salt);
         const NewUser = new UserModel({
-            fullName:"Sugam",
+            fullname:"Sugam",
             email:String(email).toLowerCase(),
             password:hash,
         })
